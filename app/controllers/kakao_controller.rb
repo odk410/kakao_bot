@@ -26,7 +26,7 @@ class KakaoController < ApplicationController
     # => ㅠㅠ 알 수 없는 명령어 입니다.
 
     if user_message == "로또"
-      return_text = (1..45).sample(6).sort.to_s
+      return_text = (1..45).to_a.sample(6).to_s
 
     elsif user_message == "메뉴"
       return_text = ["한식", "중식", "일식", "패스트 푸드"].sample(1)
@@ -42,7 +42,6 @@ class KakaoController < ApplicationController
 
       image = true
       animal = Parser::Animal.new
-      puts animal.methods
       cat_info = animal.cat
       return_text = cat_info[0]
       img_url = cat_info[1]

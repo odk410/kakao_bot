@@ -37,4 +37,5 @@ module Parser
       return [return_text, cat_url]
     end
   end
+
 end
