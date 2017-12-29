@@ -70,4 +70,5 @@ class KakaoController < ApplicationController
     else
       render json: return_message
     end
+  end
 end
