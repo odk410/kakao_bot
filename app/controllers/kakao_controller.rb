@@ -2,8 +2,13 @@ require 'parser' #helper에 등록한 것을 자동으로 찾는다.
 
 class KakaoController < ApplicationController
   def keyboard
+    # home_keyboard = {
+    #   :type => "text"
+    # }
+
     home_keyboard = {
-      :type => "text"
+      :type => "button",
+      :button => ["영화", "메뉴", "고양이", "로또"]
     }
 
     render json: home_keyboard
@@ -81,7 +86,8 @@ class KakaoController < ApplicationController
     # }
 
     home_keyboard = {
-      :type => "text"
+      :type => "button",
+      :button => ["영화", "메뉴", "고양이", "로또"]
     }
 
     return_message_with_img = {
