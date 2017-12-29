@@ -7,8 +7,8 @@ class KakaoController < ApplicationController
     # }
 
     home_keyboard = {
-      :type => "button",
-      :button => ["영화", "메뉴", "고양이", "로또"]
+      :type => "buttons",
+      :buttons => ["영화", "메뉴", "고양이", "로또"]
     }
 
     render json: home_keyboard
@@ -86,8 +86,8 @@ class KakaoController < ApplicationController
     # }
 
     home_keyboard = {
-      :type => "button",
-      :button => ["영화", "메뉴", "고양이", "로또"]
+      :type => "buttons",
+      :buttons => ["영화", "메뉴", "고양이", "로또"]
     }
 
     return_message_with_img = {
