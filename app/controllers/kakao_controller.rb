@@ -30,10 +30,8 @@ class KakaoController < ApplicationController
       cat_xml = RestClient.get(url)
       doc = Nokogiri::XML(cat_xml)
       cat_url = doc.xpath("//url").text
-
-
     else
-        return_text = "ㅠㅠ 알 수 없는 명령어 입니다. [로또], [메뉴], [고양이] 중 하나를 입력해 주세요~!"
+      return_text = "ㅠㅠ 알 수 없는 명령어 입니다. [로또], [메뉴], [고양이] 중 하나를 입력해 주세요~!"
     end
 
     # return_message = {
@@ -71,4 +69,5 @@ class KakaoController < ApplicationController
       render json: return_message_with_img
     else
       render json: return_message
+    end
 end
